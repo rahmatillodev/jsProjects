@@ -1,0 +1,14 @@
+.star {
+    transform-style:preserve-3d;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    color: red;
+}
+.star::before {
+    position: absolute;
+    content: "⭐";
+    color: inherit;
+    inset: 0;
+    text-shadow: 0 0 0.8em #fff5;
+}

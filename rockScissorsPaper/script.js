@@ -15,7 +15,7 @@ optionImages.forEach((image, index) => {
         })
 
         gameContainer.classList.add("start")
-        let time = setTimeout(() => {
+         setTimeout(() => {
             gameContainer.classList.remove("start")
             let imageSrc = e.target.querySelector("img").src;
             userResult.src = imageSrc
