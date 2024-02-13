@@ -1,5 +1,37 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
+
+body {
+    height: 100vh;
+    background: dodgerblue;
+}
+
+nav {
+    position: absolute;
+    top: 60px;
+    right: 300px;
+}
+
+nav .navContent {}
+
+.navContent .toogleBtn,
+.navContent span a {
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.navContent .toogleBtn {
+    font-size: 35px;
+    color: #0e2431;
+}
+
+.navContent span a i {}
