@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <button class="hdbtn">
+                <a href="https://github.com/Rahmatillo1908">
+                    <i class="fa fa-arrow-left-long"></i>
+                </a>
+            </button>
+            <h3 class="p-now">Music Player</h3>
+            <button class="hdbtn list">
+                <i class="fa fa-list-1-2"></i>
+            </button>
+            <div class="all">
+            </div>
+        </header>
+
+        <div class="player">
+            <div class="imgArea">
+                <img src="https://i.ytimg.com/vi/n5Pz0TxhaGo/maxresdefault.jpg" alt="">
+            </div>
+            <div class="songDetails">
+                <h1 class="name">Animation</h1>
+                <h3 class="artist">Coding</h3>
+            </div>
+            <div class="audioC">
+                <div class="songTimer">
+                    <span class="currentTime">0:00</span>
+                    <span class="maxDuration">0:00</span>
+                </div>
+                <div class="progressArea">
+                    <div class="progressBar">
+                        <audio class="mainAudio" src="./music1.mp3" id="mainAudio"></audio>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="btnC" id="prev">
+                    <i class="fa fa-backward-fast"></i>
+                </button>
+                <button class="playPause btnC">
+                    <i class="fa fa-play play"></i>
+                </button>
+                <button class="btnC" id="next">
+                    <i class="fa fa-forward-fast"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
