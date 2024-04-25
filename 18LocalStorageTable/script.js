@@ -4,6 +4,7 @@ let input3 = document.querySelector(".inp3");
 let input4 = document.querySelector(".inp4");
 let update = document.querySelector(".update");
 let addBtn = document.querySelector(".add");
+
 addBtn.addEventListener("click", () => {
     AddData();
 });
@@ -72,7 +73,6 @@ function Delete(index) {
 function Update(index) {
     addBtn.style.display = "none"
     update.style.display = "block"
-
     let data = localStorage.getItem("data") ? JSON.parse(localStorage.getItem("data")) : []
 
     input1.value = data[index].name;
