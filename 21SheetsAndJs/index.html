@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="post" name="contact-form"
+        action="https://script.google.com/macros/s/AKfycbzNM_x4XZpr-o0R5Q2u3g9hKOLdn5iRBIeqEvE0qfaSYwlY2YSFJJh8hFlOQD4YZACq/exec">
+        <input name="name" type="text">
+        <input name="email" type="text">
+        <input name="number" type="text">
+        <textarea name="message" cols="30" rows="10"></textarea>
+        <button>Send message</button>
+    </form>
+</body>
+<script>
+    let scripturl = "https://script.google.com/macros/s/AKfycbzNM_x4XZpr-o0R5Q2u3g9hKOLdn5iRBIeqEvE0qfaSYwlY2YSFJJh8hFlOQD4YZACq/exec";
+    let form = document.forms["contact-form"];
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(scripturl, { method: "POST", body: new FormData(form) })
+            .then(res => alert("Thank you"))
+            .then(() => { window.location.reload(); })
+            .catch(error => console.error("error", error.message));
+    });
+</script>
+
+</html>
