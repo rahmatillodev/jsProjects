@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #e3e7e8;
+    font-family: system-ui;
+}
+.container {
+    width: 80%;
+    margin: 0px auto;
+    transition: 0.3s;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.shopping {
+    font-size: 40px;
+    position: relative;
+}
+.shopping span {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    color: orange;
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card {
+    width: 300px;
+    margin: 20px 0px;
+    height: 380px;
+    box-shadow: 0px 0px 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+.card .title {
+    font-size: 23px;
+    font-weight: 500;
+}
+.card .price {
+    font-size: 19px;
+    font-weight: 900;
+    margin-top: 10px;
+}
+.card button {
+    width: 80%;
+    height: 50px;
+    margin: 10px 0px;
+    background: orange;
+    border: none;
+    font-size: 22px;
+    border-radius: 30px;
+}
+.card img {
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+}
+.cards {
+    width: 400px;
+    position: fixed;
+    right: -450px;
+    top: 0px;
+    background: white;
+    box-shadow: 0px 0px 10px;
+    transition: 0.3s;
+    padding: 10px;
+}
+.cards button {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid orange;
+    font-size: 25px;
+}
+.cards.active {
+    right: 0px;
+    transition: 0.3s;
+}
+.cards .closeShopping {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.listCard li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.listCard  img {
+    width: 100px;
+}
