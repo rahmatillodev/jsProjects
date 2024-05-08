@@ -1,13 +1,9 @@
 let input = document.querySelector("input")
 let button = document.querySelector("button")
 let main = document.querySelector(".main")
-
 Yangilash()
-
-
 function AddTodo() {
-    let todo = input.value.trim()
-
+    let todo = input.value
     if (todo) {
         CreateTodo(todo)
         input.value = ""
@@ -17,7 +13,6 @@ function AddTodo() {
     }
 }
 button.addEventListener("click", AddTodo)
-
 function CreateTodo(todo) {
     let div = document.createElement('div')
     let deleteBtn = document.createElement("button")
@@ -31,7 +26,6 @@ function CreateTodo(todo) {
         Save()
     })
 }
-
 function Save() {
     let todos = []
     main.querySelectorAll("div").forEach(function (item) {
@@ -39,9 +33,6 @@ function Save() {
     })
     localStorage.setItem("todo", JSON.stringify(todos))
 }
-
-
-
 function Yangilash() {
     let todos = JSON.parse(localStorage.getItem("todo"))
     todos.forEach(CreateTodo)
