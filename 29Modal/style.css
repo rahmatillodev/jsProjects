@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.customBtn {
+    width: 170px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+    border: none;
+    background: linear-gradient(0deg, #3284ed 0%, #6faeff 100%);
+    color: #fff;
+    overflow: hidden;
+}
+.customBtn:hover {
+    opacity: .7;
+}
+.customBtn:active {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
+        -4px -4px 6px 0 rgba(116, 125, 136, .2),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.modal {
+    position: fixed;
+    top: -100vh;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: top 0s ease-in-out 0.3s;
+}
+
+.modal .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out 0.2s;
+}
+
+.modal .modalContent {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.15);
+    width: 95%;
+    max-width: 350px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    opacity: 0;
+    box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.modal .modalContent h2 {
+    margin: 10px 0px;
+    font-size: 25px;
+    color: #111;
+}
+
+.modal .modalContent p {
+    margin: 15px 0px;
+    color: #222;
+    font-size: 16px;
+}
+
+.modal .modalControls {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px 0px;
+}
+
+.modal .modalControls button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.modal .modalControls .closeBtn {
+    background: transparent;
+    color: #3284ed;
+}
+
+.modal .modalControls .submitBtn {
+    background: #3284ed;
+    color: #fff;
+}
+
+.modal.active {
+    top: 0px;
+    transition: top 0s ease-in-out 0s;
+}
+
+.modal.active .overlay {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal.active .modalContent {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
