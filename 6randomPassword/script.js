@@ -4,6 +4,7 @@ const passwordInput = document.querySelector('.password-box input'),
     sliderNumber = document.querySelector('.range-box .slider-number'),
     generateButton = document.querySelector('.generate-button');
 console.log(cupyIcon);
+
 const allCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ1234567890";
 const generatePassword = () => {
     let newPassword = ""

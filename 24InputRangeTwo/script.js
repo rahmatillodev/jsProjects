@@ -22,7 +22,6 @@ function SlideTwo() {
     }
     dot2.textContent = slider2.value
     fillColor()
-
 }
 
 function fillColor() {
@@ -31,7 +30,6 @@ function fillColor() {
     sliderTrack.style.background = "linear-gradient(to right, #f1f1f1 "+color1+
     "% , dodgerblue "+color1 +"% "+ color2+"%  , #f1f1f1 "+color2+"%)"
 }
-
 
 slider1.addEventListener("input",()=>{
     SlideOne()
