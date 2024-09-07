@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i18next Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/22.5.0/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-i18next/1.2.1/jquery-i18next.min.js"></script>
+</head>
+
+<body>
+    <a href="#" class="lang-select" data-lang="en">en</a>
+    <a href="#" class="lang-select" data-lang="de">de</a>
+    <a href="#" class="lang-select" data-lang="fr">fr</a>
+    <ul class="nav">
+        <li><a href="#" data-i18n="nav.page1"></a></li>
+        <li><a href="#" data-i18n="nav.page2"></a></li>
+        <li><a href="#" data-i18n="nav.page3"></a></li>
+    </ul>
+
+    <script>
+        const resources = {
+            en: {
+                translation: {
+                    nav: {
+                        page1: 'Page One',
+                        page2: 'Page Two',
+                        page3: 'Page Three'
+                    }
+                }
+            },
+            de: {
+                translation: {
+                    nav: {
+                        page1: 'Seite Eins',
+                        page2: 'Seite Zwei',
+                        page3: 'Seite Drei'
+                    }
+                }
+            },
+            fr: {
+                translation: {
+                    nav: {
+                        page1: 'Page Un',
+                        page2: 'Page Deux',
+                        page3: 'Page Trois'
+                    }
+                }
+            }
+        };
+
+        i18next.init({
+            lng: 'en', 
+            resources
+        }, function (err, t) {
+            jqueryI18next.init(i18next, $);
+            $('body').localize();
+        });
+        
+        $('.lang-select').on('click', function (e) {
+            e.preventDefault();
+            const lang = $(this).data('lang');
+            i18next.changeLanguage(lang, function (err, t) {
+                $('body').localize();
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -4,10 +4,13 @@ function drag(event) {
   itemSrc = event.target.src;
   graphic.classList.add("drag");
 }
-function dragEnd(event) {
+function dragEnd() {
   graphic.classList.remove("drag");
 }
-function drop(event) {
+
+
+
+function drop() {
   let img = document.createElement("img");
   img.src = itemSrc;
   graphic.innerHTML = "";

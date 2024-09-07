@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="topBar">
+            <i class="fa fa-chevron-down"></i>
+            <span>Now Playing</span>
+            <i class="fa fa-ellipsis"></i>
+        </div>
+        <div class="imgArea">
+            <img src="./images/1.avif" alt="">
+        </div>
+        <div class="songDetails">
+            <p class="name">Beauz & Jvna - Crazy</p>
+            <p class="artist">Beauz & Jvna</p>
+        </div>
+        <div class="progressArea">
+            <div class="progressBar">
+            </div>
+            <div class="timer">
+                <span class="current">00:00</span>
+                <span class="duration">00:20</span>
+            </div>
+            <audio src="" class="mainAudio"></audio>
+        </div>
+        <div class="controls">
+            <i class="fa fa-repeat" id="repeatList"></i>
+            <i class="fa fa-backward" id="prev"></i>
+            <div class="playPause">
+                <i class="fa fa-play"></i>
+            </div>
+            <i class="fa fa-forward" id="next"></i>
+            <i class="fa fa-list-ol" id="moreMusic"></i>
+        </div>
+        <div class="musicList">
+            <div class="header">
+                <div class="row">
+                    <i class="fa fa-list-ol" id="moreMusic"></i>
+                    <span>Music List</span>
+                </div>
+                <div id="close" class="fa fa-x"></div>
+            </div>
+            <ul>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

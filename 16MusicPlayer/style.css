@@ -16,7 +16,7 @@ a {
     --border1: #22262a;
     --border2: #1a1d21;
     --shadow1: 0px 0px 10px #151618;
-}
+} 
 body {
     background: var(--bg1);
     height: 100vh;
