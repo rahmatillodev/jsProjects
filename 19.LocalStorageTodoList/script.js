@@ -1,7 +1,6 @@
 let input = document.querySelector("input")
 let button = document.querySelector("button")
 let main = document.querySelector(".main")
-Yangilash()
 function AddTodo() {
     let todo = input.value
     if (todo) {
@@ -38,3 +37,5 @@ function Yangilash() {
     todos.forEach(CreateTodo)
 }
 
+Yangilash()
+    
